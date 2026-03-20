@@ -1,0 +1,13 @@
+{
+  "mode": "local",
+  "local_path": ".benchmarks/large_logs_1g.log",
+  "generate_local_file": true,
+  "size_gib": 1.0,
+  "line_template": "INFO request completed status=200 latency_ms=12 path=/healthcheck\n",
+  "chunk_size": 1048576,
+  "max_line_bytes": 33554432,
+  "encoding": "utf-8",
+  "errors": "replace",
+  "track_memory": false,
+  "report_out": ".benchmarks/stress_report.txt"
+}

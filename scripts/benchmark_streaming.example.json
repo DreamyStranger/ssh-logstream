@@ -1,0 +1,13 @@
+{
+  "mode": "local",
+  "generate_local_fixtures": true,
+  "workspace": ".benchmarks/local-fixtures",
+  "repeat": 3,
+  "chunk_size": 1048576,
+  "max_line_bytes": 33554432,
+  "encoding": "utf-8",
+  "errors": "replace",
+  "track_memory": false,
+  "table_out": ".benchmarks/benchmark_table.txt",
+  "json_out": ".benchmarks/benchmark_data.json"
+}
