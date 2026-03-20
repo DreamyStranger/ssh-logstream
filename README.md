@@ -1,9 +1,10 @@
 # ssh-logstream
 
-![CI](https://github.com/DreamyStranger/ssh-logstream/actions/workflows/ci.yml/badge.svg)
-[![Python Versions](https://img.shields.io/pypi/pyversions/ssh-logstream.svg)](https://pypi.org/project/ssh-logstream/)
-![License](https://img.shields.io/github/license/DreamyStranger/ssh-logstream.svg)
-![Tests](https://img.shields.io/badge/tests-pytest-blue)
+[![CI](https://github.com/DreamyStranger/ssh-logstream/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/DreamyStranger/ssh-logstream/actions/workflows/ci.yml?query=branch%3Amain)
+[![PyPI version](https://img.shields.io/pypi/v/ssh-logstream.svg)](https://pypi.org/project/ssh-logstream/)
+[![Tested with pytest](https://img.shields.io/badge/tested%20with-pytest-0A9EDC.svg)](https://pytest.org/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 **Streaming line reader for large remote log files over SSH.**
 
