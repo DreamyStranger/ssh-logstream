@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ssh-logstream"
-version = "0.1.0"
 description = "Streaming line reader for large remote log files over SSH."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "Timur Anvar" }]
+dynamic = ["version"]
 keywords = ["ssh", "logs", "streaming", "tail", "remote-files"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -56,6 +56,9 @@ include = ["ssh_logstream*"]
 
 [tool.setuptools.package-data]
 ssh_logstream = ["py.typed"]
+
+[tool.setuptools.dynamic]
+version = { attr = "ssh_logstream.version.__version__" }
 
 [tool.pytest.ini_options]
 minversion = "8.0"

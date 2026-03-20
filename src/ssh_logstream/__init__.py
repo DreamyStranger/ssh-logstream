@@ -7,6 +7,7 @@ Public package exports for ssh-logstream.
 Overview
 --------
 This package exposes the small public surface of the library:
+- `__version__`
 - `LineStreamer`
 - `SshConfig`
 - `LineStreamerConfig`
@@ -28,8 +29,10 @@ from ssh_logstream.errors import (
     StreamingError,
 )
 from ssh_logstream.models import StreamStats
+from ssh_logstream.version import __version__
 
 __all__ = [
+    "__version__",
     "AuthenticationError",
     "ConfigurationError",
     "DecodeError",
