@@ -32,7 +32,6 @@ from ssh_logstream.models import StreamStats
 from ssh_logstream.version import __version__
 
 __all__ = [
-    "__version__",
     "AuthenticationError",
     "ConfigurationError",
     "DecodeError",
@@ -46,4 +45,5 @@ __all__ = [
     "SshLogStreamError",
     "StreamStats",
     "StreamingError",
+    "__version__",
 ]
