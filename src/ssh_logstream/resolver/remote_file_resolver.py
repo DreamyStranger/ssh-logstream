@@ -30,12 +30,12 @@ from __future__ import annotations
 import logging
 import posixpath
 
-log = logging.getLogger(__name__)
-
 from ssh_logstream.commands import build_find_file_command
 from ssh_logstream.errors import RemoteFileAmbiguityError, RemoteFileNotFoundError
 from ssh_logstream.models import ResolvedFile
 from ssh_logstream.transport import SshTransport
+
+log = logging.getLogger(__name__)
 
 
 class RemoteFileResolver:

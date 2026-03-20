@@ -35,8 +35,6 @@ from __future__ import annotations
 import logging
 from collections.abc import Iterable, Iterator
 
-log = logging.getLogger(__name__)
-
 from ssh_logstream.commands import build_follow_stream_command, build_snapshot_stream_command
 from ssh_logstream.config import LineStreamerConfig, SshConfig
 from ssh_logstream.errors import ConfigurationError
@@ -44,6 +42,8 @@ from ssh_logstream.models import StreamStats
 from ssh_logstream.resolver import RemoteFileResolver
 from ssh_logstream.streaming import LineStreamerCore
 from ssh_logstream.transport import ParamikoSshTransport, SshTransport
+
+log = logging.getLogger(__name__)
 
 
 def _require_non_empty(value: str, *, field_name: str) -> str:

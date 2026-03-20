@@ -34,8 +34,8 @@ SRC_ROOT = PROJECT_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
-from ssh_logstream import LineStreamer, LineStreamerConfig, SshConfig
-from ssh_logstream.streaming import LineStreamerCore
+from ssh_logstream import LineStreamer, LineStreamerConfig, SshConfig  # noqa: E402
+from ssh_logstream.streaming import LineStreamerCore  # noqa: E402
 
 MiB = 1024 * 1024
 GiB = 1024 * MiB

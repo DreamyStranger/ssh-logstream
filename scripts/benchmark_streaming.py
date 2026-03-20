@@ -41,8 +41,8 @@ SRC_ROOT = PROJECT_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
-from ssh_logstream import LineStreamer, LineStreamerConfig, SshConfig
-from ssh_logstream.streaming import LineStreamerCore
+from ssh_logstream import LineStreamer, LineStreamerConfig, SshConfig  # noqa: E402
+from ssh_logstream.streaming import LineStreamerCore  # noqa: E402
 
 MiB = 1024 * 1024
 DEFAULT_MODE = "ssh"
@@ -805,7 +805,8 @@ def main() -> int:
             cases = [parse_case_spec(spec) for spec in local_case_specs]
         else:
             raise SystemExit(
-                "In local mode, provide --local-case-spec NAME=PATH or use --generate-local-fixtures"
+                "In local mode, provide --local-case-spec NAME=PATH"
+                " or use --generate-local-fixtures"
             )
         ssh_config = None
 
@@ -870,7 +871,9 @@ def main() -> int:
                     decoded_bytes=local_decoded_bytes,
                 )
                 if local_line_count is not None and metrics.line_count != local_line_count:
-                    raise RuntimeError("Local benchmark line count changed between measurement passes.")
+                    raise RuntimeError(
+                        "Local benchmark line count changed between measurement passes."
+                    )
             runs.append(metrics)
             print_run_metrics(metrics)
 

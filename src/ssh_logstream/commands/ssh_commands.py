@@ -48,7 +48,8 @@ def build_find_file_command(*, folder: str, filename: str) -> str:
     quoted_folder = _shell_quote(folder)
     normalized = filename.replace("\\", "/")
     if "/" not in normalized:
-        return f"find {quoted_folder} -type f -name {_shell_quote(_escape_find_name(normalized))} -print0"
+        escaped_name = _shell_quote(_escape_find_name(normalized))
+        return f"find {quoted_folder} -type f -name {escaped_name} -print0"
     return f"find {quoted_folder} -type f -print0"
 
 

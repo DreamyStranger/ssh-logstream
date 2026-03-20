@@ -32,8 +32,6 @@ from contextlib import AbstractContextManager
 from types import TracebackType
 from typing import Protocol
 
-log = logging.getLogger(__name__)
-
 import paramiko
 from paramiko.ssh_exception import (
     AuthenticationException,
@@ -44,6 +42,8 @@ from paramiko.ssh_exception import (
 
 from ssh_logstream.config import SshConfig
 from ssh_logstream.errors import AuthenticationError, SshConnectionError, StreamingError
+
+log = logging.getLogger(__name__)
 
 
 def _append_limited(buffer: bytearray, data: bytes, *, limit: int) -> None:
